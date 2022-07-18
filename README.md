@@ -41,7 +41,9 @@ You can call the `AddSystemsResourceManager()` extension method multiple with ea
 
 ## Example
 
-1. Create a model class on your Blazor app project like below.
+1. Create a new Blazor application project.
+
+2. Create a model class on your Blazor app project like below.
 
 ```cs
 using System.ComponentModel.DataAnnotations;
@@ -52,9 +54,9 @@ public class ValidationTestModel
 }
 ```
 
-2. Implement a form on a Razor component on your Blazor app project.
+3. Implement a form on a Razor component on your Blazor app project.
 
-```html
+```razor
 <EditForm Model="_Model">
     <DataAnnotationsValidator/>
     <InputText @bind-Value="_Model.RequiredField" />
@@ -67,13 +69,13 @@ public class ValidationTestModel
 }
 ```
 
-3. Prepare `Resource1.resx` and `Resource1.ja.resx` resource files on your Blazor project. Make the `Resource1.ja.resx` to be below.
+4. Prepare `Resource1.resx` and `Resource1.ja.resx` resource files on your Blazor project. Make the `Resource1.ja.resx` to be below.
 
 Name | Value
 -----|------
 RequiredAttribute_ValidationError	| フィールド {0} は必須です。	
 
-4. Inject the `Resource1` resource as a system resource.
+5. Inject the `Resource1` resource as a system resource.
 
 ```csharp
 // Program.cs
@@ -84,9 +86,9 @@ builder.Services.AddSystemResourceManager<Resource1>();
 ...
 ```
 
-5. Finally, you will see localized validation error messages on your Blazor app, like this.
+6. Finally, you will see localized validation error messages on your Blazor app, like this.
 
-![](https://github.com/jsakamoto/Toolbelt.SystemResourceManager/blob/main/.assets/fig.001.png)
+![](https://raw.githubusercontent.com/jsakamoto/Toolbelt.SystemResourceManager/main/.assets/fig.001.png)
 
 ## Release Note
 

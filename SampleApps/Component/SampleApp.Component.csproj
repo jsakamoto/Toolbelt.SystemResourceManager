@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Toolbelt.SystemResourceManager" Version="0.0.4" />
+    <PackageReference Include="Toolbelt.SystemResourceManager" Version="1.0.0" />
     <!--<ProjectReference Include="..\..\Toolbelt.SystemResourceManager\Toolbelt.SystemResourceManager.csproj" />-->
   </ItemGroup>
 
