@@ -1,0 +1,7 @@
+﻿<linker>
+  <assembly fullname="System.ComponentModel.Annotations">
+    <type fullname="System.SR">
+      <method signature="System.Boolean UsingResourceKeys()" body="stub" value="false" />
+    </type>
+  </assembly>
+</linker>

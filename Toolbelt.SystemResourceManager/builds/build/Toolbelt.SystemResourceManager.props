@@ -1,0 +1,12 @@
+﻿<Project>
+
+  <!--
+  Disable trimming for "System.ComponentModel,Annotations.dll".
+  Because if that trimming is enabled, it uses constant strings instead of resource manager, 
+  the "Toolbelt.SystemResourceManager" will not be able to intercept retrieving validation error messages.
+  -->
+  <ItemGroup>
+    <TrimmerRootDescriptor Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)TrimmerRootDescriptor.xml))" />
+  </ItemGroup>
+
+</Project>
